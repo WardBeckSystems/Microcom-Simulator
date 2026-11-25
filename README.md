@@ -1,15 +1,15 @@
 # MicroCOM Simulator
 
-**Live: https://likedotaudio.github.io/microcom-sim/**
+**Live: https://wardbecksystems.github.io/Microcom-Simulator/**
 
 The Ward-Beck Systems MicroCOM II intercom matrix (1988–93), running in a web browser:
 
 | Page | What |
 |---|---|
-| [Emulator](https://likedotaudio.github.io/microcom-sim/emu.html) | The original MicroCOM II Assignment Software (MCOM.EXE v3.20), unmodified, on an 8086 PC emulated in TypeScript (`src/emu/`). You supply MCOM.EXE; it is not hosted here. COM1 can go to a simple simulated frame or to the matrix simulator. |
-| [Matrix simulator](https://likedotaudio.github.io/microcom-sim/matrix.html) | A 2048-port matrix engine (32 productions × 64 ports) with routing and live audio (`src/matrix/`), running in a SharedWorker so all your tabs share one matrix. |
-| [Panels](https://likedotaudio.github.io/microcom-sim/panel.html) | M7880 key panels, talent turrets, and the MicroCOM 2026 station and producer panels (`src/panel/`, `src/m2026/`). Panels in different tabs hear each other. |
-| [MicroCOM III](https://likedotaudio.github.io/microcom-sim/mc3.html) | The assignment software in the MicroCOM II look, for the large virtual matrix (`src/mc3/`). |
+| [Emulator](https://wardbecksystems.github.io/Microcom-Simulator/emu.html) | The original MicroCOM II Assignment Software (MCOM.EXE v3.20), unmodified, on an 8086 PC emulated in TypeScript (`src/emu/`). You supply MCOM.EXE; it is not hosted here. COM1 can go to a simple simulated frame or to the matrix simulator. |
+| [Matrix simulator](https://wardbecksystems.github.io/Microcom-Simulator/matrix.html) | A 2048-port matrix engine (32 productions × 64 ports) with routing and live audio (`src/matrix/`), running in a SharedWorker so all your tabs share one matrix. |
+| [Panels](https://wardbecksystems.github.io/Microcom-Simulator/panel.html) | M7880 key panels, talent turrets, and the MicroCOM 2026 station and producer panels (`src/panel/`, `src/m2026/`). Panels in different tabs hear each other. |
+| [MicroCOM III](https://wardbecksystems.github.io/Microcom-Simulator/mc3.html) | The assignment software in the MicroCOM II look, for the large virtual matrix (`src/mc3/`). |
 | `strip.html` | One station's keys in a single row, small enough for a taskbar (`src/strip/`). `strip.html?p=PROD01/PNL02&keys=12`; framed, it reports its width and station to its parent with `{ source: 'microcom-strip', v, … }` (typed in `src/strip/wire.ts`). The APK.audio OS footer frames it. Not linked from the landing page. |
 
 `index.html` is the landing page of the static build.
@@ -42,7 +42,7 @@ APK.audio's TRUNK-CASTER pins this repo and builds it into its own tracked `inte
 
 ## Where the other docs come from
 
-`MATRIX.md`, `MC3.md`, `M2026.md` and `src/emu/README.md` explain how each part works. They, and everything here except `README.md` and `.github/`, are copied from `mcom-web/` of the private [microcom](https://github.com/LikeDotAudio/microcom) archive by its `tools/publish-sim.sh`. The key strip (`strip.html`, `src/strip/`, `test/strip/`) was first committed here and has since been carried into the archive's `mcom-web/`; `publish-sim.sh` now refuses to run when this repo holds a file the archive lacks, so a change made here directly is named before `rsync --delete` could remove it. Their commands (`cd mcom-tui …`, `cd mcom-web …`) are written for that archive: `mcom-web/` is this repo, and `mcom-tui/` (the Python engine and the Unicorn reference emulator) is not published.
+`MATRIX.md`, `MC3.md`, `M2026.md` and `src/emu/README.md` explain how each part works. They, and everything here except `README.md` and `.github/`, are copied from `mcom-web/` of the private [microcom](https://github.com/WardBeckSystems/Microcom) archive by its `tools/publish-sim.sh`. The key strip (`strip.html`, `src/strip/`, `test/strip/`) was first committed here and has since been carried into the archive's `mcom-web/`; `publish-sim.sh` now refuses to run when this repo holds a file the archive lacks, so a change made here directly is named before `rsync --delete` could remove it. Their commands (`cd mcom-tui …`, `cd mcom-web …`) are written for that archive: `mcom-web/` is this repo, and `mcom-tui/` (the Python engine and the Unicorn reference emulator) is not published.
 
 ## Philosophy
 
@@ -56,7 +56,7 @@ APK.audio's TRUNK-CASTER pins this repo and builds it into its own tracked `inte
 
 MicroCOM II and its software are © 1991–93 Ward-Beck Systems Ltd., developed by Weitech Computer Solutions.
 This repository contains no part of the original program. Part of the
-[Ward-Beck Systems Preservation Society](https://likedotaudio.github.io/WBSps.ca/) archive.
+[Ward-Beck Systems Preservation Society](https://wardbecksystems.github.io/WBSps.ca/) archive.
 
 ## 📚 Wiki
 

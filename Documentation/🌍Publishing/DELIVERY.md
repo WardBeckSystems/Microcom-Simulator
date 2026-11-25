@@ -2,7 +2,7 @@
 
 ## Where the code comes from
 
-Written by the private `LikeDotAudio/microcom` archive: `tools/publish-sim.sh` there `rsync --delete`s its `mcom-web/`
+Written by the private `WardBeckSystems/Microcom` archive: `tools/publish-sim.sh` there `rsync --delete`s its `mcom-web/`
 into this checkout (minus `re/`, `specs/`, the original Ward-Beck files and any build). It refuses (exit 2) when this
 repo holds a file `mcom-web/` lacks, unless `ALLOW_DELETE=1`, and refuses (exit 3) when the archive's tests fail. This
 repo's `README.md`, `.github/`, `LICENSE` and `Documentation/` are excluded from the copy, so `--delete` never touches
@@ -19,10 +19,10 @@ npm run build:static   # → dist-static/
 
 ## Ship
 
-- **Repository**: `https://github.com/LikeDotAudio/microcom-sim` (public).
+- **Repository**: `https://github.com/WardBeckSystems/Microcom-Simulator` (public).
 - **Workflow**: `.github/workflows/pages.yml` — on push to `main` (or by hand): Node 24, `npm ci`, `npm test`,
   `npm run build:static`, upload `dist-static/`, deploy to GitHub Pages.
-- **Live**: https://likedotaudio.github.io/microcom-sim/
+- **Live**: https://wardbecksystems.github.io/Microcom-Simulator/
 - **In APK.audio**: a submodule of TRUNK-CASTER at `SRC/microcom-sim`. TRUNK-CASTER's `tools/build-intercom.sh`
   builds this pinned commit into its tracked `intercom/` folder, which is what the OS serves; this checkout itself is
   not served by any image.
